@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+  // 전역 변수  
+  // 자바스크립트에서는 전역변수 사용을 자제하자. (다른곳에서 값이 변경될수있어서 문제가 생길수있음.)
+  let global = '전역변수';
+
+  function doTask() {
+    let local = '지역변수';
+    console.log(global);
+    console.log(local);
+  }
+
+  doTask();
+  // console.log(local); //접근불가하여 error 발생.
+
+  // 선언형 함수의 경우 호이스팅 되기 때문에 선언 전이 호출가능
+  // parent();
+  // 중첩(내부)함수
+  function parent() {
+    let parentValue = '부모 데이터';
+    // 외부함수의 보조적 역활 함수(Helper 함수)
+    function child() {
+      let childValue = '자식 데이터';
+      console.log(parentValue);
+      console.log(childValue);
+    }
+    // console.log(childValue);  //error
+    child();
+  }
+  parent();
+
+  // 중첩함수를 이용하여 직각삼각형의 빗변의 길이 구하기
+  function hypotenus(x, y) {
+    //피타고라스 정리 활용(x2 + y2 = z2)
+    function square(value) {
+      // return value ** 2;
+      return Math.pow(value,2); //제곱근 구하기
+    }
+    return Math.sqrt(square(x) + square(y));  //루트 구하기.
+  }
+
+  console.log(hypotenus(2,3));
+
+
+  </script>
+</body>
+
+</html>

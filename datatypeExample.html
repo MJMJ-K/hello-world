@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //number 자료형
+    let age = 40;
+    let weight = 67.8;
+    console.log(age);
+    console.log(weight);
+    console.log(typeof age);
+    console.log(typeof weight);
+
+    //number형의 특수한 리터럴
+    console.log(10/0); //infinity
+    console.log(-10/0); //-infinity
+    console.log('권장사항'/0); //NaN
+    
+    console.log(typeof ('권장사항'/0)); //number
+
+
+    //string 자료형
+    let lastName = '김';
+    let message = '자바스크립트입니다.';
+    console.log(lastName);
+    console.log(message);
+    console.log(message+lastName);
+    console.log(message+'JavaScript');
+    let some = '\'자바\'\n자바\t스크립트';
+    console.log(some);
+
+    let language = 'Java';
+    console.log(language + '가 최고야');
+    console.log(`${language}가 ${some}야`);
+
+
+    // boolean 자료형
+    let flag = true;
+    let isLarge = 3 > 1;
+    let empty = undefined; //0, NaN, null, undefined, ''
+    console.log(flag);
+    console.log(isLarge);
+    console.log(false);
+
+    if('') {
+      console.log('ddd');
+    }
+
+    console.log(undefined == null); //true
+  </script>
+  
+</body>
+</html>

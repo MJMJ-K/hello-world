@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./JS/Account.js"></script>
+  <script src="./JS/MinusAccount.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let account = new Account('1111-1111-1111', '김기정', 1234, 10000);
+    console.log(account.toString());
+    
+    console.dir(account);
+
+
+    let maaccount = new MinusAccount('1111-1111-1111', '김기정', 1234, 10000, 1000000);
+    console.log(maaccount.toString(0));
+    console.dir(maaccount);
+    console.log('현재잔액 : '+ maaccount.getRsetMoney());
+    
+    console.log(account instanceof Account);
+    console.log(account instanceof MinusAccount);
+    console.log(account instanceof Object);
+    console.log(maaccount instanceof Account);
+    console.log(maaccount instanceof MinusAccount);
+    console.log(maaccount instanceof Object);
+
+  </script>
+</body>
+</html>

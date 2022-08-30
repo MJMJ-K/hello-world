@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 변수 호이스팅
+    // 변수 재선언 가능
+    console.log(score);
+    var score = 80;
+    var score = 90;
+    console.log(score);
+
+    function doTask() {
+      //var은 함수스코프이다
+      if(true) {
+        var some = 50;
+      }
+      console.log(some);
+    }
+    // console.log(some);
+    doTask();
+
+    // let, const
+    // console.log(weight);
+    let weight = 54.5;
+    // let weight = 70;
+    console.log(weight);
+    // 호이스팅이 뭔가요? TDZ에 대해서 설명! 면접때 많이 물어봄.
+    // 초기화 될때까지 TDZ에.....
+
+    // 상수
+    const MAX = 100;
+    MAX = 150;
+    console.log(MAX);
+
+
+
+  </script>
+  
+</body>
+</html>

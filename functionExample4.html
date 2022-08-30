@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //arrow function
+    let simple = function() {
+      console.log('일반 함수 표현식');
+    }
+
+    let simple2 = () => {
+      console.log('arrow function');
+    }
+
+    //한줄만 가능.
+    let simple3 = () => console.log('arrow function');
+
+    let simple4 = (x,y) => {
+      return x + y;
+    } 
+
+    let simple5 = (x,y) => x + y;
+
+    const result = simple5(5,8);
+    console.log(result);
+
+    let simple6 = x =>  x*2 ;
+    console.log(simple6(2));
+
+    // self call
+    (function doTask() {
+      console.log('셀프호출');
+    })();
+
+  </script>
+</body>
+
+</html>

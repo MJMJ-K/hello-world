@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num = new Number(10.3535445);  //객체화
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+
+    console.log(num);
+    console.log(num.toFixed(2)); //소숫점 2자리까지 출력
+    
+    let num2 = 3455.34343;  //기본타입
+    //auto boxing
+    console.log(num2.toFixed(2));   //.을 찍는순간 오토박싱됨
+
+    console.log(num.toString() + 90);   //문자열로
+    console.log(num.valueOf() + 90);    //기본타입으로
+
+    let str = '50';
+    let n = Number(str);  //숫자로 형변환
+    console.log(str + 40);
+    console.log(n + 40);
+
+    
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let person = {
+      name: 'Jack',
+      age: 10,
+      weight: 72.45,
+      run: function () {
+        console.log('잘 달린다.');
+      }
+    };
+
+    // 여러개의 person객체 생성
+    // Factory 함수
+    function makePerson(name, age, weight) {
+      let person = {
+        name : name,
+        age : age,
+        weight : weight
+      };
+      return person;
+    }
+
+    
+
+  </script>
+</head>
+
+<body>
+  <script>
+    for (const key in person) {
+      console.log(key);
+      if ((typeof person[key]) == 'function') {
+        person[key]();
+      } else {
+        console.log(person[key]);
+      }
+    }
+
+    console.dir(person);
+
+    console.clear();
+
+    let dahee = makePerson('전다희', 20, 30);
+    console.dir(dahee);
+
+
+  </script>
+</body>
+
+</html>

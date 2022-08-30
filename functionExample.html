@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 선언형 함수
+    function showMessage() {
+      console.log("메시지 출력함수입니다.");
+    }
+    function show(message) {
+      if (!message) {
+        console.log(message);
+      } else {
+        // return;
+        console.log("값을 전달하세요.");
+      }
+    }
+    //함수 사용(호출)
+    showMessage();
+    show('JavaScript 어렵지 않아요...');
+
+    show(); //컴파일에러가 아닌 undefined 출력됨. /초기화가 되지 않았따.
+
+
+    // Default Parameter
+    function sendMessage(sender = "guest", message = "hello") {
+      console.log(`${sender} : ${message}`);
+      console.log(sender, message);
+    }
+
+    sendMessage('bangry', '헐');
+    sendMessage('bangry');
+
+
+    //Rset Parameter
+    function sum(...args) {
+      let sum = 0;
+      for (let i = 0; i < args.length; i++) {
+        sum += args[i];
+      }
+      return sum;
+    }
+
+    console.log(sum(1));
+    console.log(sum(1, 2));
+    console.log(sum(1, 2, 3));
+    console.log(sum(1, 2, 3, 4));
+
+
+    function sum2(...args) {
+      let sum2 = 0;
+
+      // forin문
+      // for (const i in args) {
+      //     sum += args[i];
+      //   }
+
+      // forof문(자바의 확장for문)
+      for (const num of args) {
+        sum2 += num;
+      }
+      return sum2;
+    }
+
+    console.log(sum2(1));
+    console.log(sum2(1, 2));
+    console.log(sum2(1, 2, 3));
+    console.log(sum2(1, 2, 3, 4));
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   // 객체(래퍼런스) 타입
+    let person = {
+      name : 'Jack',
+      age : 10,
+      weight : 72.45,
+      run : function() {
+        console.log('잘 달린다.');
+      }
+    };
+
+    console.log(typeof person);
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.weight);
+    person.run();
+    
+    console.log(person['name']);
+    
+    //동적 타이핑
+    let some = 10;
+    console.log(`값: ${some}, 자료형: ${typeof some}`);
+    some = '바보';
+    console.log(`값: ${some}, 자료형: ${typeof some}`);
+    some = '100' + 4;
+    console.log(`값: ${some}, 자료형: ${typeof some}`);
+
+    let text = 'ABCDEFG'; //기본자료형
+    let ch = text.charAt(2); //.을 찍는순간 객체형으로 변경됨
+    //스크립트 엔진에 의해 객체자료형으로 변환
+    console.log(ch);
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 함수 표현식
+    let doTask = function (message) {
+      console.log(message);
+    };
+    doTask('함수는 객체');
+    doTask('Hello Function Expression');
+
+    let doTask2 = doTask;
+    doTask2('반가워요');
+
+    // Student student = new Student();
+    // System.out.println(student);
+
+    console.log(doTask2);
+    console.log(alert);
+
+
+    //Callback 함수
+    function whatYourName(name, callback) {
+      //나중에 호출되는 함수
+      callback(name + '바보');
+    }
+
+    whatYourName('bangry', function(data) {
+      console.log(data);
+    });
+
+
+    //배열 표현식
+
+    /*정수형 배열(자바에서)
+    int[] array = new int[10]; 배열생성
+    array[0] = 1; 배열초기화
+    array[1] = 1; 배열
+    배열 표현식 
+    int[] array = {1, 2, 3, 4, 5};
+    */
+
+    //자바스크립트의 배열은 자바의 콜렉션 객체로 생각하면됨.
+    let array = [1, 2, 3, ,4, 5];
+    array.forEach(function(value) {
+      console.log(value*10);
+    });
+    //각각의 값을 내가 처리하고싶을때 
+
+  </script>
+</body>
+
+</html>

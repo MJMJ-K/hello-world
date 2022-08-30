@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 객체(래퍼런스) 타입
+    let person = {
+      name: 'Jack',
+      age: 10,
+      weight: 72.45,
+      run: function () {
+        console.log('잘 달린다.');
+      }
+    };
+
+    /*자바스크립트의 객체는 자바의 메모리상에 만들어진 MAP객체*/
+
+    delete person.name;
+    delete person['age'];
+
+    person.name = '바보';  //추가 
+    person.name = '바보2';  //수정
+
+    console.log(person.name);
+    console.log(person.age);
+    console.dir(person);
+    console.error('hello');
+
+    console.log('name' in person);
+
+    let op1 = 10;
+    let op2 = '10';
+    console.log(op1/op2);
+    console.log(op1*op2);
+    console.log(op1+op2);
+    console.log(op1-op2);
+
+    console.log(0 == false);  //데이터 타입을 변환 후 값이 같은지 비교함
+    console.log(1 != false);
+    console.log(1 === 1); //데이터 타입까지 동일한가 비교(데이터 타입 변환 없음 / 형변환없음)
+    console.log(1 === '1'); 
+    console.log(1 !== '1'); 
+    console.log(0 !== false); 
+    console.log(undefined == null); 
+    console.log(undefined === null); 
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./JS/Student2.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let student = new Student2(10, '김기정', 90, 50, 100);
+    console.log(student.toString());
+    console.dir(Student2.prototype);
+
+    console.log(student.name);
+
+    try {
+      student.name = undefined;
+    } catch (error) {
+      // alert(error.message)
+    }
+
+    console.log('학교이름 : ' + Student2.schoolName);
+    // Student2.schoolName -> 생성자 함수에 들어가있음
+
+    Student2.study();
+    // student.study():  //에러
+
+
+
+    /* function Student() {
+      console.log('함수도 객채');
+    }
+    Student();
+
+    Student.staticMethod =function () {
+      console.log('공유함수');
+    }
+    Student.staticMethod(); */
+
+  </script>
+</body>
+</html>

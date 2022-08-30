@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let obj = new Object();
+    let obj2 = {};  //권장
+
+    let person = {
+      name: '김미정',
+      age: 10,
+      toString: function () {
+        return `${this.name}, ${this.age}`;
+      }
+    };
+
+    console.log(person.constructor === Object);
+
+    let person2 = person.constructor();
+    console.dir(person2);
+
+    //얇은복사
+    let person3 = person;
+    console.dir(person3);
+   
+
+
+    //상속구조 체크
+    console.log(Object.prototype.isPrototypeOf(person)); //부모인지? 
+
+    console.log(person.propertyIsEnumerable('name')); //forin문으로 돌릴수있는가?
+    for (const key in person) {
+      console.log(key, person[key]);
+    }
+
+    console.log(person.toLocaleString());
+    console.log(person.toString());
+
+    console.log(person.valueOf());
+
+
+    //Object의 정적(Static)메소드
+    //key 목록
+    let array = Object.keys(person);
+    for (const key of array) {
+      console.log(key);
+    }
+
+    array = Object.values(person);
+    for (const value of array) {
+      /* if('function' == typeof value){
+        value();
+      } */
+      console.log(value);
+    }
+
+
+     //깊은 복사(정적메소드)
+     let copyPerson = {};
+      Object.assign(copyPerson, person);
+      console.dir(copyPerson);
+
+
+
+  </script>
+
+</body>
+
+</html>
